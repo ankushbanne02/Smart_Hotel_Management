@@ -6,25 +6,29 @@ import SubmitButton from './Components/SubmitButton';
 import WelcomePage from './Components/WelcomePage';
 
 const App = () => {
-  // State to manage the current view
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [userName, setUserName] = useState('');
+
+  const handleInputChange = (e) => {
+    setUserName(e.target.value); // Update userName state when the input changes
+  };
 
   const handleSubmit = () => {
-    setIsSubmitted(true); // Set the state to true on button click
+    localStorage.setItem('userName', userName); // Store the user's name in localStorage
+    setIsSubmitted(true); // Set the state to true to navigate to WelcomePage
   };
 
   return (
     <div>
-      {/* Conditional rendering based on isSubmitted state */}
       {!isSubmitted ? (
         <div>
           <FirstPage title="Welcome to Hotel Eknath Patil" />
-          <InputField placeholder="Enter Your Name" />
+          <InputField placeholder="Enter Your Name" onChange={handleInputChange} />
           <InputField placeholder="Enter Your Phone Number" />
-          <SubmitButton onClick={handleSubmit} /> {/* Use onClick to trigger state change */}
+          <SubmitButton onClick={handleSubmit} />
         </div>
       ) : (
-        <WelcomePage /> // Render WelcomePage if isSubmitted is true
+        <WelcomePage />
       )}
     </div>
   );

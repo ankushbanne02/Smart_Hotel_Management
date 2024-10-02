@@ -1,19 +1,15 @@
-// src/InputField.js
+// src/Components/InputField.js
 import React from 'react';
-import './InputField.css'; // Importing CSS file for styling
+import './InputField.css'; // Import CSS for styling
 
-const InputField = ({ label, type, value, onChange, placeholder, required }) => {
+const InputField = ({ placeholder, onChange }) => {
   return (
     <div className="input-field-container">
-      <label className="input-label">{label}</label>
-      <input 
-        className="input" 
-        type={type} 
-        value={value} 
-        onChange={onChange} 
-        placeholder={placeholder} 
-        required={required} 
-        
+      <input
+        type="text"
+        className="input-field"
+        placeholder={placeholder}
+        onChange={onChange} // Capture input value when it changes
       />
     </div>
   );

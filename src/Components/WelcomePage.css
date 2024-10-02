@@ -1,27 +1,33 @@
-
 /* src/WelcomePage.css */
 .welcome-container {
-  display: flex; /* Flexbox for centering */
-  flex-direction: column; /* Align items in a column */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  display: grid; /* Use CSS Grid for more control */
+  grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
+  gap: 20px; /* Space between the grid items */
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the content vertically */
   height: 100vh; /* Full viewport height */
   background-color: #f5f5f5; /* Light background color */
+  padding: 20px;
 }
 
+.welcome-title, .welcome-message, .welcome-button {
+  text-align: center; /* Center text inside items */
+}
+
+/* Styling for welcome title */
 .welcome-title {
   font-size: 36px; /* Font size for title */
   color: #333; /* Dark text color */
-  margin-bottom: 20px; /* Space below title */
 }
 
+/* Styling for welcome message */
 .welcome-message {
   font-size: 18px; /* Font size for message */
   color: #555; /* Gray text color */
-  text-align: center; /* Center text */
   margin-bottom: 30px; /* Space below message */
 }
 
+/* Styling for the button */
 .welcome-button {
   padding: 10px 20px; /* Inner padding for button */
   background-color: #4CAF50; /* Green background */
