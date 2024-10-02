@@ -1,0 +1,29 @@
+/* src/InputField.css */
+.input-field-container {
+    margin-top: 50px; /* Space above the input field */
+    width: 400px; /* Width of the input field container */
+    margin-left: auto; /* Auto margin for centering */
+    margin-right: auto; /* Auto margin for centering */
+    display: flex; /* Flexbox for vertical alignment */
+    flex-direction: column; /* Align items in a column */
+  }
+  
+  .input-label {
+    margin-bottom: 5px; /* Space above the label */
+    font-weight: bold; 
+    font-size: 20px;/* Bold label text */
+  }
+  
+  .input {
+    padding: 10px; /* Inner padding for the input */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Increase font size for better visibility */
+  }
+  
+  .input:focus {
+    border-color: #007bff; /* Color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
